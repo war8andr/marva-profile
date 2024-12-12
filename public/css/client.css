@@ -1,0 +1,65 @@
+.logo-container{
+    overflow: hidden;
+    display: flex;
+}
+
+.logo{
+    display: flex;
+    flex-shrink: 0;
+    animation: inifite-scroll 15s linear infinite;
+}
+
+.logo img{
+    height: 8rem;
+    width: auto;
+    filter: grayscale(1);
+    margin: 30px;
+}
+
+.logo img:hover{
+    filter: grayscale(0);
+}
+
+@keyframes inifite-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-container{
+        overflow: hidden;
+        display: flex;
+    }
+
+    .logo{
+        display: flex;
+        flex-shrink: 0;
+        gap: 3rem;
+        padding: 1rem;
+        animation: inifite-scroll 8s linear infinite;
+    }
+
+    .logo img{
+        height: 3rem;
+        width: auto;
+        filter: grayscale(1)
+    }
+
+    .logo img:hover{
+        filter: grayscale(0);
+    }
+
+    @keyframes inifite-scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+}
